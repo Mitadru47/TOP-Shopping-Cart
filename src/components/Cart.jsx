@@ -4,7 +4,7 @@ const Cart = () => {
 
     return(
 
-        <div>
+        <div id="cart">
 
             <Nav />
             <h1>Cart</h1>
