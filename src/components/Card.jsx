@@ -14,9 +14,15 @@ const Card = () => {
             
             <div className="price">$5.00</div>
 
-            <div className="quantity">
+            <div className="palette">
 
-                <input />
+                <div className="quantity">
+                    <input />
+                </div>
+
+                <div className="cartButton">
+                    <button>Add to Cart</button>
+                </div>
 
             </div>
 

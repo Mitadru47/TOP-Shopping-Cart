@@ -70,8 +70,38 @@ img{
     height: 100px;
 }
 
+.palette{
+
+    display: flex;
+}
+
+input{
+    width: 75px;
+}
+
 #cart{
 
     padding: 5px;
     border: 1px solid cyan;
+}
+
+#cartItems{
+
+    padding: 5px;
+    border: 1px dotted black;
+
+    width: 840px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.cartItem{
+
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: space-around;
 }
