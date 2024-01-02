@@ -23,9 +23,7 @@ const Home = () => {
             <div id="home">
 
                 <Nav />
-                <h1>Home</h1>
-
-                <div id="cards">Loading...</div>
+                <div>Loading...</div>
 
             </div>
         );
