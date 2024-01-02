@@ -14,6 +14,13 @@ const Cart = () => {
 
                 <Cart_Item />
                 <Cart_Item />
+
+                <Cart_Item />
+                <Cart_Item />
+
+                <Cart_Item />
+                <Cart_Item />
+
                 <Cart_Item />
                 <Cart_Item />
 

@@ -1,18 +1,18 @@
-const Card = () => {
+const Card = (props) => {
 
     return(
 
-        <div className="card">
+        <div id={"card" + props.id} className="card">
 
-            <div className="title">Product Name</div>
+            <div className="title">{props.name}</div>
 
             <div className="image">
 
-                <img src=""/>
+                <img src={props.image}/>
 
             </div>
             
-            <div className="price">$5.00</div>
+            <div className="price">{props.price}</div>
 
             <div className="palette">
 
@@ -29,5 +29,7 @@ const Card = () => {
         </div>
     );
 }
+
+Card.defaultProps = { id: "default", name: "Product Name", image: "", price: "$5.00" };
 
 export default Card;
