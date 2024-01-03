@@ -10,7 +10,13 @@ const Cart = (props) => {
         <div id="cart">
 
             <Nav />
-            <h1>Cart</h1>
+
+            <div id="header">
+                    
+                <h1>Cart</h1>
+                <div>Items in Cart: {props.cartData.length}</div>
+                
+            </div>
 
             <div id="cartItems">
 
