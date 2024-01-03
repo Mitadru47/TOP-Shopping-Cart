@@ -48,6 +48,10 @@ body{
     align-items: end;
 }
 
+h1{
+    margin-bottom: 0;
+}
+
 #cards{
 
     padding: 5px;
@@ -126,4 +130,12 @@ input{
 
     display: flex;
     justify-content: space-around;
+}
+
+.cartItem_title{
+    width: 540px;
+}
+
+.cartItem_price{
+    width: 54px;
 }

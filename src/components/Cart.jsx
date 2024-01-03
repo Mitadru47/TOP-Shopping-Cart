@@ -5,37 +5,48 @@ const Cart = (props) => {
 
     console.log(props.cartData.length);
 
-    return(
+    if(props.cartData.length === 0){
 
-        <div id="cart">
+        return(
 
-            <Nav />
-
-            <div id="header">
+            <div id="cart">
+    
+                <Nav />
+    
+                <div id="header">
+                        
+                    <h1>Cart</h1>
+                    <div>Items in Cart: {props.cartData.length}</div>
                     
-                <h1>Cart</h1>
-                <div>Items in Cart: {props.cartData.length}</div>
-                
+                </div>
+    
             </div>
+        );
 
-            <div id="cartItems">
+    } else {
 
-                <Cart_Item />
-                <Cart_Item />
+        return(
 
-                <Cart_Item />
-                <Cart_Item />
+            <div id="cart">
 
-                <Cart_Item />
-                <Cart_Item />
+                <Nav />
 
-                <Cart_Item />
-                <Cart_Item />
+                <div id="header">
+                        
+                    <h1>Cart</h1>
+                    <div>Items in Cart: {props.cartData.length}</div>
+                    
+                </div>
+
+                <div id="cartItems">
+
+                    {props.cartData.map((item, index) => <Cart_Item title={item.title} quantity={item.quantity} price={item.price}/>)}
+
+                </div>
 
             </div>
-
-        </div>
-    );
+        );
+    }
 }
 
 export default Cart;
