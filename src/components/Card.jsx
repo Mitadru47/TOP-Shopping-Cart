@@ -21,7 +21,7 @@ const Card = (props) => {
                 </div>
 
                 <div className="cartButton">
-                    <button>Add to Cart</button>
+                    <button id={"cartButton" + props.id} onClick={props.handleClick}>Add to Cart</button>
                 </div>
 
             </div>

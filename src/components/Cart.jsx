@@ -1,7 +1,9 @@
 import Nav from "./Nav";
 import Cart_Item from "./Cart_Item";
 
-const Cart = () => {
+const Cart = (props) => {
+
+    console.log(props.cartData.length);
 
     return(
 

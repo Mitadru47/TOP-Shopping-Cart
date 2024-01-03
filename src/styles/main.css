@@ -40,6 +40,14 @@ body{
     border: 1px solid blue;
 }
 
+#header{
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+}
+
 #cards{
 
     padding: 5px;
