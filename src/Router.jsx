@@ -12,11 +12,13 @@ const Router = () => {
     // Add to Cart - Functionality:
 
     const handleClick = (response) => {
-
+    
         let itemIndex = response.target.id.substring(10);
-
+    
         let itemName = document.querySelector("#card" + itemIndex + " .title").innerText;
         let itemPrice = document.querySelector("#card" + itemIndex + " .price").innerText;
+
+        let itemQuantity = document.querySelector("#quantity" + itemIndex).value;
         
         // Checking for Repeats/Duplicates:
 
@@ -25,8 +27,12 @@ const Router = () => {
 
             if(item.title === itemName){
 
-                quantity = item.quantity;
-                quantity++;
+                if(itemQuantity){
+                    quantity = item.quantity + Number(itemQuantity) 
+
+                } else {
+                    quantity = item.quantity + 1;
+                }
 
                 // console.log(quantity);
             }
@@ -85,7 +91,7 @@ const Router = () => {
             }
         })
 
-        console.log(temp);
+        // console.log(temp);
         setCartData(temp);
     }
 

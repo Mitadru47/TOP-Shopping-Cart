@@ -17,7 +17,7 @@ const Card = (props) => {
             <div className="palette">
 
                 <div className="quantity">
-                    <input />
+                    <input id={"quantity" + props.id}/>
                 </div>
 
                 <div className="cartButton">
