@@ -7,9 +7,9 @@ import React from "react";
 
 const Router = () => {
 
-    // Add to Cart - Functionality:
-
     const [cartData, setCartData] = React.useState([]);
+    
+    // Add to Cart - Functionality:
 
     const handleClick = (response) => {
 
@@ -53,11 +53,40 @@ const Router = () => {
                 }
             });
 
-            console.log(temp);
+            // console.log(temp);
             setCartData(temp);
         }
 
         // console.log(cartData); 
+    }
+
+    // Remove from Cart - Functionality:
+
+    const handleRemove = (response) => {
+
+        let temp = [];
+        let itemIndex = response.target.id.substring(12);
+
+        cartData.forEach((item) => {
+
+            if(item.title !== cartData[itemIndex].title){
+                temp.push(item);
+                
+            } else {
+
+                let quantity = item.quantity;
+                quantity--;
+
+                if(quantity > 0){
+
+                    item.quantity--;
+                    temp.push(item);
+                }
+            }
+        })
+
+        console.log(temp);
+        setCartData(temp);
     }
 
     const router = createBrowserRouter([
@@ -69,7 +98,7 @@ const Router = () => {
         
         {
             path: "/cart",
-            element: <Cart cartData={cartData}/>
+            element: <Cart cartData={cartData} handleRemove={handleRemove}/>
         }
     ]);
 

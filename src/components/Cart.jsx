@@ -65,7 +65,7 @@ const Cart = (props) => {
 
                 <div id="cartItems">
 
-                    {props.cartData.map((item, index) => <Cart_Item key={index} id={index} title={item.title} quantity={item.quantity} price={item.price}/>)}
+                    {props.cartData.map((item, index) => <Cart_Item key={index} id={index} title={item.title} quantity={item.quantity} price={item.price} handleRemove={props.handleRemove}/>)}
 
                 </div>
 

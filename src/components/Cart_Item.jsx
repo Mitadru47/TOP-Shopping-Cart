@@ -2,7 +2,7 @@ const Cart_Item = (props) => {
 
     return(
 
-        <div className="cartItem">
+        <div id={"cartItem" + props.id} className="cartItem">
 
             <div className="cartItem_title">{props.title}</div>
 
@@ -11,7 +11,7 @@ const Cart_Item = (props) => {
 
             <div className="removeButton">
 
-                <button>Remove</button>
+                <button id={"removeButton" + props.id} onClick={props.handleRemove}>Remove</button>
 
             </div>
 
