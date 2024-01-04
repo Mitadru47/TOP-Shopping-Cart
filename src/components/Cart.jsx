@@ -3,7 +3,13 @@ import Cart_Item from "./Cart_Item";
 
 const Cart = (props) => {
 
-    console.log(props.cartData.length);
+    // Counting Items in Cart:
+
+    let cartItems = 0;
+    props.cartData.forEach((item) => {
+
+        cartItems += item.quantity;
+    });
 
     if(props.cartData.length === 0){
 
@@ -16,7 +22,7 @@ const Cart = (props) => {
                 <div id="header">
                         
                     <h1>Cart</h1>
-                    <div>Items in Cart: {props.cartData.length}</div>
+                    <div>Items in Cart: {cartItems}</div>
                     
                 </div>
     
@@ -34,7 +40,7 @@ const Cart = (props) => {
                 <div id="header">
                         
                     <h1>Cart</h1>
-                    <div>Items in Cart: {props.cartData.length}</div>
+                    <div>Items in Cart: {cartItems}</div>
                     
                 </div>
 

@@ -17,6 +17,14 @@ const Home = (props) => {
             .then(json => setData(json));
     }, []);
 
+    // Counting Items in Cart:
+
+    let cartItems = 0;
+    props.cartData.forEach((item) => {
+
+        cartItems += item.quantity;
+    });
+
     if(data.length === 0){
         
         return(
@@ -40,7 +48,7 @@ const Home = (props) => {
                 <div id="header">
                     
                     <h1>Home</h1>
-                    <div>Items in Cart: {props.cartData.length}</div>
+                    <div>Items in Cart: {cartItems}</div>
                 
                 </div>
 

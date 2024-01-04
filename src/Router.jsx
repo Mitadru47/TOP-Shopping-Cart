@@ -28,7 +28,7 @@ const Router = () => {
                 quantity = item.quantity;
                 quantity++;
 
-                console.log(quantity);
+                // console.log(quantity);
             }
         });
 
