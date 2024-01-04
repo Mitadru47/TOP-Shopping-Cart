@@ -8,6 +8,8 @@ body{
 
     margin: 0;
     /* border: 1px solid blueviolet; */
+
+    font-family: 'Share Tech Mono', monospace;
 }
 
 #root{
@@ -160,9 +162,10 @@ input{
     border-radius: 2.5px;
 
     height: 23.6px;
-    width: 93px;
+    width: 105px;
 
     text-align: center;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 #cart{
@@ -220,6 +223,8 @@ button{
 
     padding: 5px 15px;
     background-color: white;
+
+    font-family: 'Share Tech Mono', monospace;
 }
 
 button:hover{

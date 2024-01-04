@@ -22,7 +22,16 @@ const Router = () => {
         
         // Checking for Repeats/Duplicates:
 
-        let quantity = 1;
+        let duplicate = false;
+        let quantity = 0;
+
+        if(itemQuantity){
+            quantity = Number(itemQuantity);
+            
+        } else {
+            quantity = 1;    
+        }
+
         cartData.forEach((item) => {
 
             if(item.title === itemName){
@@ -34,13 +43,14 @@ const Router = () => {
                     quantity = item.quantity + 1;
                 }
 
+                duplicate = true;
                 // console.log(quantity);
             }
         });
 
         let entry = { title: itemName, quantity: quantity, price: itemPrice };
 
-        if(quantity === 1){
+        if(!duplicate){
             setCartData((prevValue) => [...prevValue, entry]);
 
         } else {
