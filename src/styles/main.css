@@ -1,19 +1,19 @@
 html{
 
-    margin: 5px;
-    border: 1px solid red;
+    /* margin: 5px; */
+    /* border: 1px solid red; */
 }
 
 body{
 
-    padding: 5px;
-    border: 1px solid blueviolet;
+    margin: 0;
+    /* border: 1px solid blueviolet; */
 }
 
 #root{
 
     padding: 5px;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
 
     /* height: 100vh; */
 
@@ -25,19 +25,35 @@ body{
 
 #nav{
 
+    padding: 5px 0;
     border: 1px solid green;
 
     display: flex;
     justify-content: end;
 
-    width: 1021px;
+    width: 1051px;
     gap: 10px;
+
+    border: 1px solid black;
+    border-radius: 2.5px;
+}
+
+#nav a{
+
+    text-decoration: none;
+    color: black;
+
+    padding-right: 5px;
+}
+
+#nav a:hover{
+    font-size: 1.1rem;
 }
 
 #home{
 
     padding: 5px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 #header{
@@ -46,21 +62,57 @@ body{
 
     justify-content: space-between;
     align-items: end;
+
+    padding-bottom: 10px;
 }
 
 h1{
+
+    padding-left: 5px;
     margin-bottom: 0;
+}
+
+#loader{
+
+    display: flex;
+    font-size: 5rem;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 1053px;
+    height: 680px;
+}
+
+#cartPalette{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+
+    gap: 2.5px;
+    padding-right: 5px;
+}
+
+#cartTotal{
+    font-size: 1.2rem;
 }
 
 #cards{
 
     padding: 5px;
+
     border: 1px dotted black;
+    border-radius: 2.5px;
 
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
+
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
 .card{
@@ -69,6 +121,7 @@ h1{
     width: 250px;
 
     border: 1px solid black;
+    border-radius: 2.5px;
 
     display: flex;
     flex-direction: column;
@@ -76,7 +129,7 @@ h1{
     justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 15px;
 }
 
 .card .title{
@@ -102,21 +155,30 @@ img{
 }
 
 input{
-    width: 75px;
+
+    border: 1px solid black;
+    border-radius: 2.5px;
+
+    height: 23.6px;
+    width: 93px;
+
+    text-align: center;
 }
 
 #cart{
 
     padding: 5px;
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
 }
 
 #cartItems{
 
     padding: 5px;
+    
     border: 1px dotted black;
+    border-radius: 2.5px;
 
-    width: 1010px;
+    width: 1041px;
 
     display: flex;
     flex-direction: column;
@@ -127,15 +189,41 @@ input{
 .cartItem{
 
     border: 1px solid black;
+    border-radius: 2.5px;
 
     display: flex;
+
+    align-items: center;
     justify-content: space-around;
+
+    padding: 7.5px 0;
 }
 
 .cartItem_title{
     width: 540px;
 }
 
+.cartItem_quantity{
+
+    text-align: center;
+    width: 35px;
+}
+
 .cartItem_price{
     width: 54px;
+}
+
+button{
+
+    border: 1px solid black;
+    border-radius: 2.5px;
+
+    padding: 5px 15px;
+    background-color: white;
+}
+
+button:hover{
+
+    color: white;
+    background-color: black;
 }

@@ -17,7 +17,7 @@ const Card = (props) => {
             <div className="palette">
 
                 <div className="quantity">
-                    <input id={"quantity" + props.id}/>
+                    <input id={"quantity" + props.id} placeholder="..." autoComplete="off"/>
                 </div>
 
                 <div className="cartButton">

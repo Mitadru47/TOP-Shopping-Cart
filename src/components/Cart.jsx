@@ -35,7 +35,7 @@ const Cart = (props) => {
                 <div id="header">
                         
                     <h1>Cart</h1>
-                    <div>Items in Cart: {cartItems}</div>
+                    <div id="cartPalette">Items in Cart: {cartItems}</div>
                     
                 </div>
     
@@ -54,10 +54,10 @@ const Cart = (props) => {
                         
                     <h1>Cart</h1>
 
-                    <div>
+                    <div id="cartPalette">
                     
                         <div>Items in Cart: {cartItems}</div>
-                        <div>Total: ${cartTotal}</div>
+                        <div id="cartTotal">Total: ${cartTotal}</div>
 
                     </div>
                     

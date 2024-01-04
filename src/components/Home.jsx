@@ -32,7 +32,10 @@ const Home = (props) => {
             <div id="home">
 
                 <Nav />
-                <div>Loading...</div>
+                
+                <div id="loader">    
+                    <div>Loading...</div>
+                </div>
 
             </div>
         );
@@ -48,7 +51,7 @@ const Home = (props) => {
                 <div id="header">
                     
                     <h1>Home</h1>
-                    <div>Items in Cart: {cartItems}</div>
+                    <div id="cartPalette">Items in Cart: {cartItems}</div>
                 
                 </div>
 
