@@ -11,6 +11,19 @@ const Cart = (props) => {
         cartItems += item.quantity;
     });
 
+    // Cart Total Functionailty:
+
+    let cartTotal = 0;
+    props.cartData.forEach((item) => {
+
+        let price = item.quantity * Number(item.price.substring(1));
+        cartTotal += price;
+
+        // console.log(price);
+    });
+
+    cartTotal = (Math.round(cartTotal * 100))/100;
+
     if(props.cartData.length === 0){
 
         return(
@@ -40,7 +53,13 @@ const Cart = (props) => {
                 <div id="header">
                         
                     <h1>Cart</h1>
-                    <div>Items in Cart: {cartItems}</div>
+
+                    <div>
+                    
+                        <div>Items in Cart: {cartItems}</div>
+                        <div>Total: ${cartTotal}</div>
+
+                    </div>
                     
                 </div>
 
